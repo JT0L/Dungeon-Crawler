@@ -24,7 +24,7 @@ class Dungeon:
         return abs(room_1.x - room_2.x) + abs(room_1.y - room_2.y) == 1
 
     @staticmethod
-    def _check_if_opposite_door_exists(current_room, neighbour_room, direction):  # we can do this in one line but for clarity I split it into multiline function
+    def _check_if_opposite_door_exists(current_room, neighbour_room, direction):
         opposite_direction = Dungeon._get_opposite_direction(direction)
         return neighbour_room.doors[opposite_direction] == current_room.name
 

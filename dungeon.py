@@ -21,7 +21,8 @@ class Dungeon:
 
     @staticmethod
     def _check_if_rooms_are_adjacent(room_1, room_2, direction):  # left this unused parameter in order to fit this function into the pattern
-        return abs(room_1.x - room_2.x) + abs(room_1.y - room_2.y) == 1
+        if room_1.x is not None and room_2.x is not None: # check if these rooms are in the connected area
+            return abs(room_1.x - room_2.x) + abs(room_1.y - room_2.y) == 1
 
     @staticmethod
     def _check_if_opposite_door_exists(current_room, neighbour_room, direction):

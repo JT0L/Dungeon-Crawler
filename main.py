@@ -7,7 +7,7 @@ from txt_level_reader import TxtLevelReader
 
 
 if __name__ == '__main__':
-    FILE_PATH = "levels/level6.txt"
+    FILE_PATH = "levels/level1.txt"
 
     rooms_input = TxtLevelReader.read_from_file(FILE_PATH)
     rooms = TxtLevelReader.parse_rooms(rooms_input)
